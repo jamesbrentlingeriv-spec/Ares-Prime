@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ares Prime | A Cyberpunk Noir Thriller by James Brentlinger</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Enter the domes of Ares Prime. Read the first three chapters of the sci-fi noir detective thriller by James Brentlinger. Follow Detective Jax as she investigates murder among Mars' corporate elite.">
+  <meta name="keywords" content="Ares Prime, James Brentlinger, Sci-Fi, Cyberpunk Noir, Book Reader, Mars Detective, Space Mystery, Dark Eyes Trilogy">
+  <meta name="author" content="James Brentlinger">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.css?v=2">
+</head>
+<body class="cyber-noir-theme">
+  <!-- Video Background -->
+  <video autoplay loop muted playsinline class="cyber-bg-video" id="bgVideo">
+    <source src="ares.mp4" type="video/mp4">
+  </video>
+
+  <!-- Glowing background elements -->
+  <div class="cyber-bg-glow glow-crimson"></div>
+  <div class="cyber-bg-glow glow-blue"></div>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-accent">ARES</span>PRIME
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#dossier" class="nav-link active" data-target-tab="synopsis">Case File</a>
+      <a href="#dossier" class="nav-link" data-target-tab="world">About Book</a>
+      <a href="#dossier" class="nav-link" data-target-tab="author">Author</a>
+    </nav>
+    <button class="btn btn-primary start-reading-btn" id="headerReadBtn">
+      <span>READ SAMPLE</span>
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Main Content Grid -->
+  <main class="dashboard-container">
+    
+    <!-- Left Column: Holographic Cover & Quick Actions -->
+    <section class="panel-left">
+      <div class="glass-card cover-card">
+        <div class="hologram-wrapper">
+          <img src="ares.jpg" alt="Ares Prime Book Cover" class="book-cover" id="bookCoverImg">
+          <div class="hologram-light"></div>
+        </div>
+        
+        <div class="book-meta">
+          <h1 class="book-title">ARES PRIME</h1>
+          <p class="book-subtitle">A Sapphic Tech-Noir Detective Romance</p>
+          <div class="meta-pills">
+            <span class="meta-pill">CYBERPUNK</span>
+            <span class="meta-pill">SAPPHIC ROMANCE</span>
+            <span class="meta-pill">DETECTIVE NOIR</span>
+          </div>
+        </div>
+        
+        <div class="quick-details">
+          <div class="detail-row">
+            <span class="detail-label">Author</span>
+            <span class="detail-value">James Brentlinger</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Length</span>
+            <span class="detail-value">254 Pages</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Setting</span>
+            <span class="detail-value">Zenith Domes, Mars</span>
+          </div>
+        </div>
+        
+        <div class="action-buttons">
+          <button class="btn btn-primary start-reading-btn w-full" id="mainReadBtn">
+            <span>READ FREE CHAPTERS</span>
+          </button>
+          <a href="ares-prime.epub" download="ares-prime.epub" class="btn btn-secondary w-full" id="downloadEpubBtn">
+            <span>FREE EPUB DOWNLOAD</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Column: Interactive Case Files & Dossiers -->
+    <section class="panel-right" id="dossier">
+      <div class="glass-card dossier-card">
+        <!-- Dossier Navigation Tabs -->
+        <div class="dossier-tabs">
+          <button class="dossier-tab active" data-tab="synopsis" id="tabSynopsis">CASE FILES</button>
+          <button class="dossier-tab" data-tab="characters" id="tabCharacters">PROFILES</button>
+          <button class="dossier-tab" data-tab="world" id="tabWorld">ABOUT THE BOOK</button>
+          <button class="dossier-tab" data-tab="author" id="tabAuthor">AUTHOR DOSSIER</button>
+        </div>
+
+        <!-- Dossier Content Body -->
+        <div class="dossier-content">
+          
+          <!-- Synopsis Section -->
+          <div class="tab-pane active" id="paneSynopsis">
+            <h2 class="section-title"><span class="line-glow"></span>CASE SUMMARY: THE SILVER-EYED CEO</h2>
+            <p class="synopsis-lead">"Dawn on Mars was a lie. The red dust of Ares Prime didn't just coat the boots; it coated the soul."</p>
+            <div class="dossier-body">
+              <p>On the unforgiving colony of Mars, breathing is a luxury only the elite can afford. When a high-ranking corporate executive is found surgically mutilated in the billionaire-exclusive Zenith Domes, hardened lower-sector Detective Jax is thrust into a dangerous, electrifying alliance with the company's untouchable CEO, Elara Vance.</p>
+              <p>Forced to navigate a labyrinth of cartel violence, dark-web frame-jobs, and a magnetic, undeniable attraction that challenges Jax’s deepest emotional walls, the gritty cop and the ruthlessly capable billionaire must race to unravel a terrifying conspiracy. With two hundred thousand innocent lives hanging in the balance and enemies hiding in the highest echelons of power, Jax must decide if she can finally drop her armor and trust the woman who rules the world she despises—before the red dust buries them all.</p>
+            </div>
+            
+            <h3 class="subsection-title">Preview Chapter Guide</h3>
+            <div class="chapter-guide">
+              <div class="chapter-guide-item">
+                <span class="chapter-num">01</span>
+                <div>
+                  <h4>Chapter One: The Red Dust</h4>
+                  <p>Detective Jax leaves the subterranean warrens of Sector 4 to investigate a high-profile homicide in the climate-controlled luxury of the Zenith Domes. She discovers Marcus Tyrell's cauterized remains.</p>
+                </div>
+              </div>
+              <div class="chapter-guide-item">
+                <span class="chapter-num">02</span>
+                <div>
+                  <h4>Chapter Two: The Owner</h4>
+                  <p>Billionaire CEO Elara Vance overrides precinct protocols and confronts Jax directly at the crime scene. Vance hands over raw, encrypted perimeter files, initiating a tense, complicated partnership.</p>
+                </div>
+              </div>
+              <div class="chapter-guide-item">
+                <span class="chapter-num">03</span>
+                <div>
+                  <h4>Chapter Three: The Bureaucracy</h4>
+                  <p>Jax returns to the copper-tasting air of Precinct 12 in Sector 4. Captain Graves gives her 72 hours to solve the murder before Vance Interplanetary's private security forces seize the files.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Characters Section -->
+          <div class="tab-pane" id="paneCharacters">
+            <h2 class="section-title"><span class="line-glow"></span>SECURE PROFILES: BIOMETRIC RECOGNITION (CLICK AVATAR FOR ID CARD)</h2>
+            
+            <div class="profile-cards">
+              <!-- Jax -->
+              <div class="profile-card">
+                <div class="profile-header">
+                  <div class="profile-avatar avatar-jax" title="Click to open APPD ID Badge"></div>
+                  <div class="profile-title">
+                    <h3>DETECTIVE JAX</h3>
+                    <span class="profile-meta">Homicide Dept. | Sector 4</span>
+                  </div>
+                </div>
+                <div class="profile-details">
+                  <p><strong>Background:</strong> Survived the Tantalus Mine cave-in at age 14 which claimed her parents. Spent 15 years in lower-sector homicide. Stubborn, cynical, and wears a worn synth-leather trench coat. Struggles to maintain her professional armor against Elara Vance's magnetic presence, finding her detective's instincts constantly challenged by their intense, mutual attraction.</p>
+                </div>
+              </div>
+
+              <!-- Elara -->
+              <div class="profile-card">
+                <div class="profile-header">
+                  <div class="profile-avatar avatar-elara" title="Click to open Vance Executive Credentials"></div>
+                  <div class="profile-title">
+                    <h3>ELARA VANCE</h3>
+                    <span class="profile-meta">CEO | Vance Interplanetary</span>
+                  </div>
+                </div>
+                <div class="profile-details">
+                  <p><strong>Background:</strong> The heir to the Martian terraforming empire. Possesses metallic neural-lace implants and striking genetically modified icy silver eyes. Exudes predatory corporate grace. Behind her corporate shell lies a growing obsession with Detective Jax, whom she chooses to help directly rather than hiding behind her legal shield.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- World Section (About the Book - Fully Fleshed Out) -->
+          <div class="tab-pane" id="paneWorld">
+            <h2 class="section-title"><span class="line-glow"></span>LORE ARCHIVES: THE WORLD OF ARES PRIME</h2>
+            
+            <div class="world-intro-text">
+              <p><em>Ares Prime</em> is a hard science-fiction tech-noir thriller set on Mars. The narrative balances a high-stakes corporate conspiracy with a slow-burn sapphic romance, detailing how two women from opposite ends of a divided planet collide.</p>
+            </div>
+
+            <div class="archive-grid">
+              <div class="archive-item">
+                <h4>INTIMACY IN THE COLD: COLLISION OF CLASSES</h4>
+                <p>The relationship between Detective Jax and CEO Elara Vance represents the ultimate clash of Martian status. Jax, born in the subterranean mining tunnels of Sector Four, has spent her life breathing recycled rust. Elara, owner of the atmospheric grid, lives in localized Earth gravity surrounded by imported marble. Their electric connection pierces through their respective armor, forcing them to trust each other in a world where vulnerability is fatal.</p>
+              </div>
+
+              <div class="archive-item">
+                <h4>OXYGEN AS CAPITAL: THE GEOGRAPHY OF SURVIVAL</h4>
+                <p>In the colonies of Mars, atmospheric pressure and air quality are corporate commodities. The <strong>Zenith Domes</strong> house the executive elite under localized gravity plates and distilled glacial water. Beneath them lie **The Warrens of Sector Four**, where structural failures are common, gravity is Martian-standard (0.38g), and citizens breathe thin, recycled sludge that smells of old copper pennies.</p>
+              </div>
+              
+              <div class="archive-item">
+                <h4>THE TECH-NOIR ATMOSPHERE</h4>
+                <p>Technology on Mars is invasive and biometric. Corporate executives track their vitals in real-time via quantum-entangled relays mapped directly to Vance security grids. Cybernetic neural-laces line temples to process data streams, while military-grade Class-4 surgical lasers double as weapons. Crime is no longer spontaneous; it is cauterized, corporate-sponsored, and monitored.</p>
+              </div>
+            </div>
+
+            <div class="teasers-grid">
+              <div class="teaser-box">
+                <span class="teaser-tag">THEME FILES</span>
+                <p class="teaser-text"><strong>Corporate Feudalism:</strong> "The case stopped being about justice and started being about damage control."</p>
+              </div>
+              <div class="teaser-box">
+                <span class="teaser-tag">SURVIVAL FILES</span>
+                <p class="teaser-text"><strong>Martian Hostility:</strong> "Mars didn't forgive. It didn't compromise. And the red dust creeps through the seals."</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Author Section (Fully Fleshed Out) -->
+          <div class="tab-pane" id="paneAuthor">
+            <h2 class="section-title"><span class="line-glow"></span>CREATOR DOSSIER: JAMES BRENTLINGER</h2>
+            
+            <div class="author-layout">
+              <div class="author-bio-text">
+                <p><strong>James Brentlinger</strong> is an author of speculative sci-fi novels and hard-boiled cyber-noir mysteries. His writing explores the dark corners of technological advancement, focusing on industrial espionage, socio-economic divides in space colonies, and the resilience of characters born in resource-starved outer colonies.</p>
+                
+                <p>Brentlinger's work combines hard science concepts with the tight, rhythmic pacing of detective noir. Prior to writing <em>Ares Prime</em>, he authored the acclaimed <strong>Dark Eyes Trilogy</strong> (featured at <a href="https://youwillsee.us" target="_blank" class="author-link-highlight">youwillsee.us</a>), which follows a forgotten survivor's rise to lead a revolution against an elite class that uses cybernetic filters to ignore the poor.</p>
+                
+                <h3 class="subsection-title">Author's Philosophy</h3>
+                <blockquote class="author-quote">
+                  "In science fiction, we often focus on the marvels of progress. But in Ares Prime, I wanted to focus on the pipeline. Who maintains the atmospheric valves? Who mines the ice? The contrast between a penthouse executive who doesn't even know what dust tastes like, and a detective who was buried under collapsed bedrock in the mines, is where the story breathes."
+                </blockquote>
+
+                <h3 class="subsection-title">Published Bibliography</h3>
+                <div class="bibliography-list">
+                  <div class="bib-item">
+                    <span class="bib-year">2023–25</span>
+                    <div>
+                      <strong>The Dark Eyes Trilogy</strong>
+                      <p>Set thirty years after the catastrophic Amber Pulse, The Dark Eyes Trilogy follows Elara’s transformation from a forgotten survivor in the impoverished Shadow Sump to the leader of a full-scale revolution against the elite Apex Tiers. In a brutally stratified world where the wealthy use cybernetic implants to literally filter the poor out of their vision, Elara must weaponize the world's mutated, oil-like electrical energy to force the ruling class to open their eyes. Featured at youwillsee.us.</p>
+                    </div>
+                  </div>
+                  <div class="bib-item">
+                    <span class="bib-year">2026</span>
+                    <div>
+                      <strong>Ares Prime</strong>
+                      <p>On the unforgiving colony of Mars, breathing is a luxury only the elite can afford. When a high-ranking corporate executive is found surgically mutilated in the billionaire-exclusive Zenith Domes, hardened lower-sector Detective Jax is thrust into a dangerous, electrifying alliance with the company's untouchable CEO, Elara Vance. Forced to navigate a labyrinth of cartel violence, dark-web frame-jobs, and a magnetic, undeniable attraction that challenges Jax’s deepest emotional walls, the gritty cop and the ruthlessly capable billionaire must race to unravel a terrifying conspiracy. With two hundred thousand innocent lives hanging in the balance and enemies hiding in the highest echelons of power, Jax must decide if she can finally drop her armor and trust the woman who rules the world she despises—before the red dust buries them all.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- EBOOK READER OVERLAY -->
+  <div class="reader-overlay" id="readerOverlay">
+    
+    <!-- Reader Header -->
+    <div class="reader-header">
+      <div class="reader-nav-left">
+        <button class="btn-icon-only close-reader-btn" id="closeReaderBtn" title="Back to Case Files">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        <span class="reader-doc-title">ARES PRIME PREVIEW</span>
+      </div>
+      
+      <!-- Chapter Selector -->
+      <div class="reader-nav-center">
+        <select class="chapter-select" id="chapterSelect">
+          <!-- Populated by JS -->
+        </select>
+      </div>
+
+      <!-- Reader Configurations -->
+      <div class="reader-nav-right">
+        <!-- Font Size Controls -->
+        <div class="control-group">
+          <button class="font-size-btn" id="fontDecrease" title="Decrease Font Size">A-</button>
+          <span class="font-size-label" id="fontSizeIndicator">100%</span>
+          <button class="font-size-btn" id="fontIncrease" title="Increase Font Size">A+</button>
+        </div>
+
+        <!-- Themes Selector -->
+        <div class="control-group">
+          <div class="theme-swatch swatch-obsidian active" data-theme="obsidian" title="Obsidian Space (Dark)"></div>
+          <div class="theme-swatch swatch-laser" data-theme="laser" title="Laser Rust (Cyber)"></div>
+          <div class="theme-swatch swatch-sepia" data-theme="sepia" title="Sepia Parchment (Warm)"></div>
+          <div class="theme-swatch swatch-light" data-theme="light" title="Zenith Domes (Light)"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reading Scrollable Viewport -->
+    <div class="reader-viewport-wrapper scrollable-content" id="readerViewport">
+      <div class="reader-content-container">
+        
+        <!-- Toggleable Info Panel -->
+        <div class="book-info-panel hidden" id="bookInfoPanel">
+          <h3 class="info-title">Book Information</h3>
+          <div class="info-details-grid">
+            <p><span class="info-meta-label">Author:</span> James Brentlinger</p>
+            <p><span class="info-meta-label">Published:</span> 2026</p>
+            <p><span class="info-meta-label">Word Count:</span> ~10,000 words (preview)</p>
+          </div>
+        </div>
+
+        <!-- Article Content -->
+        <article class="prose-reader" id="readerArticle">
+          <!-- Populated dynamically by JS -->
+        </article>
+        
+      </div>
+    </div>
+
+    <!-- Bottom Navigation Bar (Matching React Component layout) -->
+    <div class="reader-footer">
+      <div class="reader-footer-content">
+        
+        <!-- Prev Button -->
+        <button class="btn-footer-nav" id="prevChapterBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          Prev
+        </button>
+
+        <!-- Center Details -->
+        <div class="reader-footer-center">
+          <span class="chapter-indicator" id="chapterIndicator">Chapter 1 of 3</span>
+          <button class="info-toggle-btn" id="infoToggleBtn" title="Book Information">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Next Button -->
+        <button class="btn-footer-nav" id="nextChapterBtn">
+          Next
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="icon-sm">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        
+      </div>
+    </div>
+  </div>
+  <!-- Mars Viewer Toggle Button -->
+  <button class="mars-viewer-btn" id="marsViewerBtn" title="Toggle UI to watch background feed">
+    <span class="mars-btn-scanline"></span>
+    <span class="mars-btn-text">LET'S SEE MARS</span>
+    <svg class="mars-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+      <circle cx="12" cy="12" r="3"></circle>
+    </svg>
+  </button>
+
+  <!-- ID Card Modal -->
+  <div class="id-modal" id="idCardModal">
+    <div class="id-modal-backdrop" id="idModalBackdrop"></div>
+    <div class="id-card-wrapper">
+      
+      <!-- Close button on the card -->
+      <button class="id-card-close" id="idCardCloseBtn" title="Close ID Card">&times;</button>
+      
+      <!-- Jax APPD ID Card (Folding Leather Wallet) -->
+      <div class="id-card card-jax" id="idCardJax">
+        <div class="wallet-container">
+          <!-- Left side: Police Badge -->
+          <div class="wallet-side side-badge">
+            <div class="badge-holder">
+              <!-- SVG metallic badge from reference image -->
+              <svg class="police-badge-svg" viewBox="0 0 200 240">
+                <!-- Inner black background shield -->
+                <path d="M100 10 L160 50 L170 120 C170 170, 135 210, 100 230 C65 210, 30 170, 30 120 L40 50 Z" fill="#18181b" stroke="#71717a" stroke-width="2"/>
+                <!-- Chrome outer border shield -->
+                <path d="M100 13 L155 51 L164 117 C164 163, 131 201, 100 220 C69 201, 36 163, 36 117 L45 51 Z" fill="none" stroke="url(#metalGrad)" stroke-width="5" filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.8))"/>
+                <!-- Upper scroll for ARES PRIME -->
+                <path d="M 40 85 Q 100 55 160 85 L 155 97 Q 100 67 45 97 Z" fill="#27272a" stroke="url(#metalGrad)" stroke-width="1.5"/>
+                <path id="aresPrimeTextPath" d="M 45 89 Q 100 60 155 89" fill="none"/>
+                <text fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="900" letter-spacing="1.5">
+                  <textPath href="#aresPrimeTextPath" startOffset="50%" text-anchor="middle">ARES PRIME</textPath>
+                </text>
+                <!-- Central glowing ring and triangle symbol -->
+                <circle cx="100" cy="132" r="32" fill="#09090b" stroke="url(#metalGrad)" stroke-width="2"/>
+                <circle cx="100" cy="132" r="26" fill="none" stroke="#00f0ff" stroke-width="2.5" filter="drop-shadow(0 0 5px rgba(0, 240, 255, 0.8))"/>
+                <!-- Triangle center icon -->
+                <polygon points="100,116 114,141 86,141" fill="none" stroke="#00f0ff" stroke-width="2.5" filter="drop-shadow(0 0 3px rgba(0, 240, 255, 0.8))"/>
+                <polygon points="100,123 108,137 92,137" fill="#00f0ff"/>
+                <!-- Lower scroll for POLICE -->
+                <path d="M 45 175 Q 100 170 155 175 L 150 188 Q 100 183 50 188 Z" fill="#27272a" stroke="url(#metalGrad)" stroke-width="1.5"/>
+                <path id="policeTextPath" d="M 50 180 Q 100 176 150 180" fill="none"/>
+                <text fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="900" letter-spacing="2">
+                  <textPath href="#policeTextPath" startOffset="50%" text-anchor="middle">POLICE</textPath>
+                </text>
+                <defs>
+                  <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffffff" />
+                    <stop offset="30%" stop-color="#a1a1aa" />
+                    <stop offset="50%" stop-color="#f4f4f5" />
+                    <stop offset="70%" stop-color="#52525b" />
+                    <stop offset="100%" stop-color="#27272a" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          
+          <!-- Right side: Cyber ID Card -->
+          <div class="wallet-side side-card">
+            <div class="police-card-body">
+              <div class="police-card-header">
+                <span class="police-card-meta">ARES PRIME SEC</span>
+                <h3 class="police-card-title">ID CARD</h3>
+              </div>
+              <div class="police-card-main">
+                <div class="police-photo-frame">
+                  <img src="jax.jpg" alt="Detective Jax" class="police-photo">
+                  <div class="police-hologram"></div>
+                </div>
+                <div class="police-card-info">
+                  <div class="police-meta-row"><span class="police-lbl">BAG. OF</span> <span class="police-val">COM/POLICE</span></div>
+                  <div class="police-meta-row"><span class="police-lbl">BADGE</span> <span class="police-val">#8842-CID</span></div>
+                  <div class="police-meta-row"><span class="police-lbl">SECTOR</span> <span class="police-val">LOWER 4</span></div>
+                  <div class="police-name">JAX</div>
+                  <div class="police-rank">HOMICIDE DETECTIVE</div>
+                </div>
+              </div>
+              <div class="police-card-footer">
+                <div class="police-barcode"></div>
+                <div class="police-sensor"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elara Vance Interplanetary ID Card (Frosted HUD Card) -->
+      <div class="id-card card-elara" id="idCardElara">
+        <div class="hud-corners">
+          <div class="corner-notch notch-tl"></div>
+          <div class="corner-notch notch-tr"></div>
+          <div class="corner-notch notch-bl"></div>
+          <div class="corner-notch notch-br"></div>
+        </div>
+        
+        <!-- Background decorative circuit vectors -->
+        <svg class="circuit-bg-svg" viewBox="0 0 500 300">
+          <path d="M 60 70 L 150 70 L 180 110" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5"/>
+          <circle cx="60" cy="70" r="3" fill="rgba(0, 240, 255, 0.4)"/>
+          
+          <path d="M 50 150 L 160 150 L 180 140" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5"/>
+          <circle cx="50" cy="150" r="3" fill="rgba(0, 240, 255, 0.4)"/>
+
+          <path d="M 70 230 L 160 230 L 185 180" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5"/>
+          <circle cx="70" cy="230" r="3" fill="rgba(0, 240, 255, 0.4)"/>
+
+          <path d="M 440 70 L 350 70 L 320 110" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5"/>
+          <circle cx="440" cy="70" r="3" fill="rgba(0, 240, 255, 0.4)"/>
+
+          <path d="M 450 150 L 340 150 L 320 140" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5"/>
+          <circle cx="450" cy="150" r="3" fill="rgba(0, 240, 255, 0.4)"/>
+
+          <path d="M 430 230 L 340 230 L 315 180" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5"/>
+          <circle cx="430" cy="230" r="3" fill="rgba(0, 240, 255, 0.4)"/>
+        </svg>
+
+        <div class="vance-card-top">
+          <div class="vance-card-top-left">
+            <span class="vance-card-company">VANCE INTERPLANETARY</span>
+            <div class="glass-ceo-text">CEO</div>
+          </div>
+          <div class="vance-card-top-right">
+            <!-- Signal Bars Indicator -->
+            <div class="vance-signal-bars">
+              <span class="bar bar1 active"></span>
+              <span class="bar bar2 active"></span>
+              <span class="bar bar3 active"></span>
+              <span class="bar bar4 active"></span>
+              <span class="bar bar5 active"></span>
+            </div>
+            <!-- Globe wireframe logo -->
+            <svg class="vance-globe-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="50" cy="50" r="40"/>
+              <ellipse cx="50" cy="50" rx="40" ry="15"/>
+              <ellipse cx="50" cy="50" rx="15" ry="40"/>
+              <line x1="5" y1="50" x2="95" y2="50"/>
+              <line x1="50" y1="5" x2="50" y2="95"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="vance-card-center">
+          <div class="vance-photo-ring-outer">
+            <div class="vance-photo-ring-inner">
+              <img src="elara.jpg" alt="CEO Elara Vance" class="vance-photo">
+            </div>
+          </div>
+        </div>
+
+        <div class="vance-card-bottom">
+          <div class="vance-barcode"></div>
+          <div class="vance-employee-info">
+            <h2 class="vance-name">ELARA VANCE</h2>
+            <div class="vance-role">CHIEF EXECUTIVE OFFICER</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Javascript -->
+  <script src="app.js?v=2"></script>
+</body>
+</html>
