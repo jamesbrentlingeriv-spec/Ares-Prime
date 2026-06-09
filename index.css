@@ -8,24 +8,24 @@
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Theme Color Palette */
-  --bg-obsidian: #09090b;
-  --bg-charcoal: #18181b;
-  --text-silver: #cbd5e1;
-  --text-dim: #64748b;
+  --bg-obsidian: #000000;
+  --bg-charcoal: #2e2e2e;
+  --text-silver: #808181;
+  --text-dim: #808183;
   --text-white: #ffffff;
   
-  /* Neon Accents */
-  --neon-laser: #ff0055;
-  --neon-cyber: #00f0ff;
-  --neon-glow-laser: rgba(255, 0, 85, 0.45);
-  --neon-glow-cyber: rgba(0, 240, 255, 0.35);
+  /* Accent Color (Romantic Burgundy) */
+  --neon-laser: #9e1945;
+  --neon-cyber: #9c1542;
+  --neon-glow-laser: rgb(161, 0, 54);
+  --neon-glow-cyber: rgba(116, 2, 40, 0.35);
   
   /* Card Styling (Glassmorphism) */
-  --glass-bg: rgba(24, 24, 27, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-border-focus: rgba(0, 240, 255, 0.2);
+  --glass-bg: rgba(0, 0, 0, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-border-focus: rgba(122, 31, 61, 0.3);
   --glass-blur: blur(16px);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
 
   /* Reader Default Options */
   --reader-font-size: 1.125rem;
@@ -93,7 +93,7 @@ body {
 .glow-blue {
   bottom: -10vw;
   left: -5vw;
-  background-color: var(--neon-cyber);
+  background-color: #7a1f3d;
 }
 
 /* Scrollbar customization */
@@ -112,7 +112,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--neon-cyber);
+  background: var(--neon-laser);
 }
 
 /* Custom scrollbar class for reader */
@@ -142,6 +142,9 @@ blockquote {
   font-style: italic;
   color: var(--text-white);
   margin: 1.5rem 0;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem 1.5rem;
+  border-radius: 0 4px 4px 0;
 }
 
 /* ==========================================================================
@@ -155,10 +158,11 @@ blockquote {
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 5%;
-  background: rgba(9, 9, 11, 0.85);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: var(--glass-blur);
-  border-bottom: 1px solid var(--glass-border);
+  border-bottom: 1px solid rgba(122, 31, 61, 0.2);
   z-index: 100;
+  box-shadow: 0 0 20px rgba(122, 31, 61, 0.1);
 }
 
 .logo {
@@ -167,7 +171,7 @@ blockquote {
   font-size: 1.5rem;
   letter-spacing: 0.15em;
   color: var(--text-white);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.3), 0 0 20px rgba(122, 31, 61, 0.2);
 }
 
 .logo-accent {
@@ -199,9 +203,9 @@ blockquote {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--neon-cyber);
+  background-color: var(--neon-laser);
   transition: width 0.3s ease;
-  box-shadow: 0 0 8px var(--neon-glow-cyber);
+  box-shadow: 0 0 8px var(--neon-glow-laser);
 }
 
 .nav-link:hover {
@@ -253,15 +257,16 @@ blockquote {
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--neon-cyber);
-  border-color: var(--neon-cyber);
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
+  color: var(--text-white);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 10px rgba(122, 31, 61, 0.1);
 }
 
 .btn-secondary:hover {
-  background-color: var(--neon-cyber);
-  color: var(--bg-obsidian);
-  box-shadow: 0 0 20px var(--neon-glow-cyber);
+  background-color: var(--neon-laser);
+  color: var(--text-white);
+  border-color: var(--neon-laser);
+  box-shadow: 0 0 20px var(--neon-glow-laser);
   transform: translateY(-2px);
 }
 
@@ -294,13 +299,13 @@ blockquote {
   backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
   border-radius: 8px;
-  box-shadow: var(--glass-shadow);
+  box-shadow: var(--glass-shadow), 0 0 20px rgba(122, 31, 61, 0.15);
   padding: 2.5rem;
   transition: border-color 0.3s ease;
 }
 
 .glass-card:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(122, 31, 61, 0.25);
 }
 
 /* ==========================================================================
@@ -327,7 +332,7 @@ blockquote {
   margin-bottom: 2rem;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(255, 0, 85, 0.25);
+  box-shadow: 0 0 30px rgba(122, 31, 61, 0.35);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
 }
 
@@ -339,7 +344,7 @@ blockquote {
   border-radius: 4px;
   pointer-events: none;
   z-index: 2;
-  box-shadow: inset 0 0 15px rgba(255, 0, 85, 0.3);
+  box-shadow: inset 0 0 15px rgba(122, 31, 61, 0.3);
 }
 
 .book-cover {
@@ -354,9 +359,9 @@ blockquote {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(255, 0, 85, 0.15) 0%,
-    rgba(0, 240, 255, 0.05) 50%,
-    rgba(255, 0, 85, 0.15) 100%
+    rgba(122, 31, 61, 0.15) 0%,
+    rgba(122, 31, 61, 0.05) 50%,
+    rgba(122, 31, 61, 0.15) 100%
   );
   pointer-events: none;
   mix-blend-mode: screen;
@@ -366,7 +371,7 @@ blockquote {
 /* Cover hover micro-animation */
 .hologram-wrapper:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 15px 40px rgba(255, 0, 85, 0.4), 0 0 20px rgba(0, 240, 255, 0.2);
+  box-shadow: 0 15px 40px rgba(122, 31, 61, 0.5), 0 0 20px rgba(122, 31, 61, 0.25);
 }
 
 .book-meta {
@@ -379,16 +384,17 @@ blockquote {
   letter-spacing: 0.05em;
   color: var(--text-white);
   margin-bottom: 0.5rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.25), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .book-subtitle {
   font-family: var(--font-mono);
   font-size: 0.8rem;
-  color: var(--neon-cyber);
+  color: var(--neon-laser);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 1.25rem;
+  text-shadow: 0 0 6px var(--neon-glow-laser);
 }
 
 .meta-pills {
@@ -402,11 +408,13 @@ blockquote {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   font-weight: 700;
-  background-color: rgba(255, 255, 255, 0.05);
-  color: var(--text-silver);
+  background-color: rgba(122, 31, 61, 0.1);
+  color: var(--text-white);
   padding: 0.35rem 0.75rem;
   border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(122, 31, 61, 0.3);
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(122, 31, 61, 0.15);
 }
 
 .quick-details {
@@ -428,12 +436,13 @@ blockquote {
 
 .detail-label {
   font-family: var(--font-mono);
-  color: var(--text-dim);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .detail-value {
   color: var(--text-white);
   font-weight: 500;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.12);
 }
 
 .action-buttons {
@@ -496,13 +505,13 @@ blockquote {
 }
 
 .dossier-tab.active {
-  color: var(--neon-cyber);
-  text-shadow: 0 0 8px var(--neon-glow-cyber);
+  color: var(--neon-laser);
+  text-shadow: 0 0 8px var(--neon-glow-laser);
 }
 
 .dossier-tab.active::after {
-  background-color: var(--neon-cyber);
-  box-shadow: 0 0 10px var(--neon-glow-cyber);
+  background-color: var(--neon-laser);
+  box-shadow: 0 0 10px var(--neon-glow-laser);
 }
 
 /* Tab panes */
@@ -533,6 +542,7 @@ blockquote {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
 .line-glow {
@@ -547,8 +557,8 @@ blockquote {
   font-family: var(--font-mono);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--neon-cyber);
-  text-shadow: 0 0 6px var(--neon-glow-cyber);
+  color: var(--neon-laser);
+  text-shadow: 0 0 6px var(--neon-glow-laser);
   text-transform: uppercase;
   margin-top: 2.25rem;
   margin-bottom: 1rem;
@@ -563,6 +573,7 @@ blockquote {
   font-style: italic;
   color: var(--text-white);
   margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
 }
 
 .dossier-body {
@@ -571,6 +582,8 @@ blockquote {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  color: var(--text-white);
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.08);
 }
 
 .teasers-grid {
@@ -581,16 +594,18 @@ blockquote {
 }
 
 .teaser-box {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(122, 31, 61, 0.2);
   padding: 1.25rem;
   border-radius: 4px;
   transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(122, 31, 61, 0.15);
 }
 
 .teaser-box:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.55);
+  border-color: rgba(122, 31, 61, 0.4);
+  box-shadow: 0 0 20px rgba(122, 31, 61, 0.25);
 }
 
 .teaser-tag {
@@ -606,7 +621,8 @@ blockquote {
 .teaser-text {
   font-size: 0.85rem;
   line-height: 1.5;
-  color: var(--text-silver);
+  color: var(--text-white);
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
 }
 
 /* Chapter Directory styling */
@@ -620,16 +636,18 @@ blockquote {
 .chapter-guide-item {
   display: flex;
   gap: 1.5rem;
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(122, 31, 61, 0.15);
   padding: 1.25rem;
   border-radius: 4px;
   transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(122, 31, 61, 0.12);
 }
 
 .chapter-guide-item:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.55);
+  border-color: rgba(122, 31, 61, 0.4);
+  box-shadow: 0 0 20px rgba(122, 31, 61, 0.25);
 }
 
 .chapter-num {
@@ -648,12 +666,14 @@ blockquote {
   color: var(--text-white);
   margin-bottom: 0.25rem;
   letter-spacing: 0.02em;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
 }
 
 .chapter-guide-item p {
   font-size: 0.85rem;
   line-height: 1.5;
-  color: var(--text-silver);
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.08);
 }
 
 /* Profiles Layout */
@@ -664,17 +684,18 @@ blockquote {
 }
 
 .profile-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(122, 31, 61, 0.15);
   border-radius: 6px;
   padding: 1.5rem;
   transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(122, 31, 61, 0.12);
 }
 
 .profile-card:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.55);
   border-color: var(--glass-border-focus);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.05);
+  box-shadow: 0 0 20px rgba(122, 31, 61, 0.25);
 }
 
 .profile-header {
@@ -702,8 +723,8 @@ blockquote {
 }
 
 .avatar-elara {
-  border-color: var(--neon-cyber);
-  box-shadow: 0 0 10px var(--neon-glow-cyber);
+  border-color: var(--neon-laser);
+  box-shadow: 0 0 10px var(--neon-glow-laser);
   background-image: url('elara.jpg');
 }
 
@@ -712,6 +733,7 @@ blockquote {
   font-weight: 700;
   color: var(--text-white);
   letter-spacing: 0.05em;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
 }
 
 .profile-meta {
@@ -723,6 +745,8 @@ blockquote {
 .profile-details {
   font-size: 0.875rem;
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.08);
 }
 
 /* Archives World Panel */
@@ -732,6 +756,7 @@ blockquote {
   font-style: italic;
   margin-bottom: 2rem;
   color: var(--text-white);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
 }
 
 .archive-grid {
@@ -741,16 +766,18 @@ blockquote {
 }
 
 .archive-item {
-  background: rgba(255, 255, 255, 0.01);
-  border-left: 2px solid var(--neon-cyber);
+  background: rgba(0, 0, 0, 0.5);
+  border-left: 2px solid var(--neon-laser);
   padding: 1.25rem;
   transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 12px rgba(122, 31, 61, 0.12);
 }
 
 .archive-item:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-left-color: var(--neon-laser);
-  box-shadow: inset 5px 0 10px rgba(0, 240, 255, 0.02);
+  background: rgba(0, 0, 0, 0.55);
+  border-left-color: var(--text-white);
+  box-shadow: 0 0 20px rgba(122, 31, 61, 0.2), inset 5px 0 10px rgba(122, 31, 61, 0.05);
 }
 
 .archive-item h4 {
@@ -759,11 +786,13 @@ blockquote {
   color: var(--text-white);
   margin-bottom: 0.5rem;
   letter-spacing: 0.02em;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
 }
 
 .archive-item p {
   font-size: 0.85rem;
   line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* Author Section Layout */
@@ -779,6 +808,7 @@ blockquote {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .author-portrait-wrapper {
@@ -786,8 +816,8 @@ blockquote {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 2px solid var(--neon-cyber);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.25), 0 4px 12px rgba(0,0,0,0.5);
+  border: 2px solid var(--neon-laser);
+  box-shadow: 0 0 15px rgba(122, 31, 61, 0.25), 0 4px 12px rgba(0,0,0,0.5);
   overflow: hidden;
   margin-left: 1.5rem;
   margin-bottom: 0.5rem;
@@ -801,8 +831,8 @@ blockquote {
 }
 
 .author-link-highlight {
-  color: var(--neon-cyber);
-  border-bottom: 1px dashed var(--neon-cyber);
+  color: var(--neon-laser);
+  border-bottom: 1px dashed var(--neon-laser);
   font-weight: 500;
   transition: all 0.2s ease;
   padding-bottom: 1px;
@@ -810,8 +840,8 @@ blockquote {
 
 .author-link-highlight:hover {
   color: var(--text-white);
-  border-bottom-color: var(--neon-laser);
-  text-shadow: 0 0 6px var(--neon-glow-cyber);
+  border-bottom-color: var(--text-white);
+  text-shadow: 0 0 6px var(--neon-glow-laser);
 }
 
 .author-quotes {
@@ -821,7 +851,7 @@ blockquote {
 .author-quote {
   font-family: var(--font-sans);
   font-size: 0.95rem;
-  color: var(--text-silver);
+  color: var(--text-white);
 }
 
 /* Bibliography List styling */
@@ -835,18 +865,19 @@ blockquote {
 .bib-item {
   display: flex;
   gap: 1.5rem;
-  background: rgba(255, 255, 255, 0.01);
-  border: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(122, 31, 61, 0.15);
   padding: 1.25rem;
   border-radius: 4px;
+  box-shadow: 0 0 12px rgba(122, 31, 61, 0.12);
 }
 
 .bib-year {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--neon-cyber);
-  text-shadow: 0 0 5px var(--neon-glow-cyber);
+  color: var(--neon-laser);
+  text-shadow: 0 0 5px var(--neon-glow-laser);
   min-width: 80px;
   line-height: 1.5;
 }
@@ -857,12 +888,13 @@ blockquote {
   display: block;
   margin-bottom: 0.25rem;
   letter-spacing: 0.02em;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
 }
 
 .bib-item p {
   font-size: 0.85rem;
   line-height: 1.5;
-  color: var(--text-silver);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ==========================================================================
@@ -966,7 +998,7 @@ blockquote {
 
 .chapter-select:hover, .chapter-select:focus {
   border-color: var(--neon-cyber);
-  box-shadow: 0 0 10px rgba(0, 240, 255, 0.15);
+  box-shadow: 0 0 10px rgba(122, 31, 61, 0.15);
 }
 
 .chapter-select option {
@@ -1115,7 +1147,7 @@ blockquote {
   font-family: var(--font-sans);
   font-size: var(--reader-font-size);
   line-height: var(--reader-line-height);
-  color: #d1d5db; /* gray-300 */
+  color: #e5e7eb; /* lighter gray for better readability */
   text-align: left;
 }
 
@@ -1236,11 +1268,11 @@ blockquote {
 }
 .reader-overlay.theme-laser .book-info-panel {
   background-color: #240508;
-  border-color: rgba(255, 0, 85, 0.25);
+  border-color: rgba(122, 31, 61, 0.25);
 }
 .reader-overlay.theme-laser .reader-footer {
   background-color: #1c0406;
-  border-color: rgba(255, 0, 85, 0.15);
+  border-color: rgba(122, 31, 61, 0.15);
 }
 .reader-overlay.theme-laser .btn-footer-nav {
   background-color: #2e080b;
@@ -1497,7 +1529,7 @@ body.viewing-mars .cyber-bg-glow {
   align-items: center;
   gap: 0.75rem;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2), inset 0 0 8px rgba(0, 240, 255, 0.1);
+  box-shadow: 0 0 15px rgba(122, 31, 61, 0.2), inset 0 0 8px rgba(122, 31, 61, 0.1);
   overflow: hidden;
 }
 
@@ -1532,7 +1564,7 @@ body.viewing-mars .cyber-bg-glow {
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0) 0%,
-    rgba(0, 240, 255, 0.05) 10%,
+    rgba(122, 31, 61, 0.05) 10%,
     rgba(255, 255, 255, 0) 20%
   );
   background-size: 100% 200%;
@@ -1556,7 +1588,7 @@ body.viewing-mars .cyber-bg-glow {
 body.viewing-mars .mars-viewer-btn {
   border-color: var(--neon-laser);
   color: var(--neon-laser);
-  box-shadow: 0 0 15px rgba(255, 0, 85, 0.2), inset 0 0 8px rgba(255, 0, 85, 0.1);
+  box-shadow: 0 0 15px rgba(122, 31, 61, 0.2), inset 0 0 8px rgba(122, 31, 61, 0.1);
   background: rgba(9, 9, 11, 0.85);
 }
 
@@ -1691,7 +1723,7 @@ body.viewing-mars .mars-viewer-btn:hover {
   width: 100%;
   max-width: 180px;
   height: auto;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.85)) drop-shadow(0 0 10px rgba(0, 240, 255, 0.15));
+  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.85)) drop-shadow(0 0 10px rgba(122, 31, 61, 0.15));
 }
 
 /* Right flap: Holds the virtual ID card */
@@ -1754,7 +1786,7 @@ body.viewing-mars .mars-viewer-btn:hover {
   border: 1.5px solid var(--neon-cyber);
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  box-shadow: 0 0 15px rgba(122, 31, 61, 0.2);
   background-color: #000;
 }
 
@@ -1769,12 +1801,12 @@ body.viewing-mars .mars-viewer-btn:hover {
   inset: 0;
   background: linear-gradient(
     rgba(18, 16, 16, 0) 50%, 
-    rgba(0, 240, 255, 0.15) 50%
+    rgba(122, 31, 61, 0.15) 50%
   ), linear-gradient(
     90deg, 
     rgba(255, 0, 0, 0.04), 
     rgba(0, 255, 0, 0.02), 
-    rgba(0, 240, 255, 0.08)
+    rgba(122, 31, 61, 0.08)
   );
   background-size: 100% 4px, 6px 100%;
   pointer-events: none;
@@ -1854,7 +1886,7 @@ body.viewing-mars .mars-viewer-btn:hover {
   border-radius: 50%;
   border: 1.5px solid var(--neon-cyber);
   position: relative;
-  box-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+  box-shadow: 0 0 8px rgba(122, 31, 61, 0.4);
 }
 
 .police-sensor::after {
@@ -1919,11 +1951,11 @@ body.viewing-mars .mars-viewer-btn:hover {
 }
 
 .circuit-bg-svg path {
-  stroke: rgba(0, 240, 255, 0.22) !important; /* Cyan traces visible on white */
+  stroke: rgba(122, 31, 61, 0.22) !important; /* Rust traces */
 }
 
 .circuit-bg-svg circle {
-  fill: rgba(0, 240, 255, 0.45) !important;
+  fill: rgba(122, 31, 61, 0.45) !important;
 }
 
 /* Top card row: CEO chrome text, signal indicator, wireframe globe */
@@ -2005,12 +2037,12 @@ body.viewing-mars .mars-viewer-btn:hover {
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  border: 1px solid rgba(0, 240, 255, 0.25);
+  border: 1px solid rgba(122, 31, 61, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  background: rgba(0, 240, 255, 0.05);
+  background: rgba(122, 31, 61, 0.05);
 }
 
 .vance-photo-ring-inner {
@@ -2102,7 +2134,7 @@ body.viewing-mars .mars-viewer-btn:hover {
 }
 
 .profile-avatar.avatar-elara:hover {
-  box-shadow: 0 0 15px var(--neon-cyber);
+  box-shadow: 0 0 15px var(--neon-laser);
 }
 
 /* Responsive ID details */
