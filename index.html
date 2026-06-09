@@ -170,13 +170,13 @@
           <!-- Characters Section -->
           <div class="tab-pane" id="paneCharacters">
             <h2 class="section-title"><span class="line-glow"></span>SECURE PROFILES: BIOMETRIC RECOGNITION (CLICK
-              AVATAR FOR ID CARD)</h2>
+              AVATAR FOR ANIMATED PORTRAIT)</h2>
 
             <div class="profile-cards">
               <!-- Jax -->
               <div class="profile-card">
                 <div class="profile-header">
-                  <div class="profile-avatar avatar-jax" title="Click to open APPD ID Badge"></div>
+                  <div class="profile-avatar avatar-jax" title="Click to view animated portrait"></div>
                   <div class="profile-title">
                     <h3>DETECTIVE JAX</h3>
                     <span class="profile-meta">Homicide Dept. | Sector 4</span>
@@ -193,7 +193,7 @@
               <!-- Elara -->
               <div class="profile-card">
                 <div class="profile-header">
-                  <div class="profile-avatar avatar-elara" title="Click to open Vance Executive Credentials"></div>
+                  <div class="profile-avatar avatar-elara" title="Click to view animated portrait"></div>
                   <div class="profile-title">
                     <h3>ELARA VANCE</h3>
                     <span class="profile-meta">CEO | Vance Interplanetary</span>
@@ -437,170 +437,12 @@
     </svg>
   </button>
 
-  <!-- ID Card Modal -->
-  <div class="id-modal" id="idCardModal">
-    <div class="id-modal-backdrop" id="idModalBackdrop"></div>
-    <div class="id-card-wrapper">
-
-      <!-- Close button on the card -->
-      <button class="id-card-close" id="idCardCloseBtn" title="Close ID Card">&times;</button>
-
-      <!-- Jax APPD ID Card (Folding Leather Wallet) -->
-      <div class="id-card card-jax" id="idCardJax">
-        <div class="wallet-container">
-          <!-- Left side: Police Badge -->
-          <div class="wallet-side side-badge">
-            <div class="badge-holder">
-              <!-- SVG metallic badge from reference image -->
-              <svg class="police-badge-svg" viewBox="0 0 200 240">
-                <!-- Inner black background shield -->
-                <path d="M100 10 L160 50 L170 120 C170 170, 135 210, 100 230 C65 210, 30 170, 30 120 L40 50 Z"
-                  fill="#18181b" stroke="#71717a" stroke-width="2" />
-                <!-- Chrome outer border shield -->
-                <path d="M100 13 L155 51 L164 117 C164 163, 131 201, 100 220 C69 201, 36 163, 36 117 L45 51 Z"
-                  fill="none" stroke="url(#metalGrad)" stroke-width="5"
-                  filter="drop-shadow(0px 2px 4px rgba(0,0,0,0.8))" />
-                <!-- Upper scroll for ARES PRIME -->
-                <path d="M 40 85 Q 100 55 160 85 L 155 97 Q 100 67 45 97 Z" fill="#27272a" stroke="url(#metalGrad)"
-                  stroke-width="1.5" />
-                <path id="aresPrimeTextPath" d="M 45 89 Q 100 60 155 89" fill="none" />
-                <text fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="900"
-                  letter-spacing="1.5">
-                  <textPath href="#aresPrimeTextPath" startOffset="50%" text-anchor="middle">ARES PRIME</textPath>
-                </text>
-                <!-- Central glowing ring and triangle symbol -->
-                <circle cx="100" cy="132" r="32" fill="#09090b" stroke="url(#metalGrad)" stroke-width="2" />
-                <circle cx="100" cy="132" r="26" fill="none" stroke="#00f0ff" stroke-width="2.5"
-                  filter="drop-shadow(0 0 5px rgba(0, 240, 255, 0.8))" />
-                <!-- Triangle center icon -->
-                <polygon points="100,116 114,141 86,141" fill="none" stroke="#00f0ff" stroke-width="2.5"
-                  filter="drop-shadow(0 0 3px rgba(0, 240, 255, 0.8))" />
-                <polygon points="100,123 108,137 92,137" fill="#00f0ff" />
-                <!-- Lower scroll for POLICE -->
-                <path d="M 45 175 Q 100 170 155 175 L 150 188 Q 100 183 50 188 Z" fill="#27272a"
-                  stroke="url(#metalGrad)" stroke-width="1.5" />
-                <path id="policeTextPath" d="M 50 180 Q 100 176 150 180" fill="none" />
-                <text fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="900"
-                  letter-spacing="2">
-                  <textPath href="#policeTextPath" startOffset="50%" text-anchor="middle">POLICE</textPath>
-                </text>
-                <defs>
-                  <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#ffffff" />
-                    <stop offset="30%" stop-color="#a1a1aa" />
-                    <stop offset="50%" stop-color="#f4f4f5" />
-                    <stop offset="70%" stop-color="#52525b" />
-                    <stop offset="100%" stop-color="#27272a" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-
-          <!-- Right side: Cyber ID Card -->
-          <div class="wallet-side side-card">
-            <div class="police-card-body">
-              <div class="police-card-header">
-                <span class="police-card-meta">ARES PRIME SEC</span>
-                <h3 class="police-card-title">ID CARD</h3>
-              </div>
-              <div class="police-card-main">
-                <div class="police-photo-frame">
-                  <img src="jax.jpg" alt="Detective Jax" class="police-photo">
-                  <div class="police-hologram"></div>
-                </div>
-                <div class="police-card-info">
-                  <div class="police-meta-row"><span class="police-lbl">BAG. OF</span> <span
-                      class="police-val">COM/POLICE</span></div>
-                  <div class="police-meta-row"><span class="police-lbl">BADGE</span> <span
-                      class="police-val">#8842-CID</span></div>
-                  <div class="police-meta-row"><span class="police-lbl">SECTOR</span> <span class="police-val">LOWER
-                      4</span></div>
-                  <div class="police-name">JAX</div>
-                  <div class="police-rank">HOMICIDE DETECTIVE</div>
-                </div>
-              </div>
-              <div class="police-card-footer">
-                <div class="police-barcode"></div>
-                <div class="police-sensor"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Elara Vance Interplanetary ID Card (Frosted HUD Card) -->
-      <div class="id-card card-elara" id="idCardElara">
-        <div class="hud-corners">
-          <div class="corner-notch notch-tl"></div>
-          <div class="corner-notch notch-tr"></div>
-          <div class="corner-notch notch-bl"></div>
-          <div class="corner-notch notch-br"></div>
-        </div>
-
-        <!-- Background decorative circuit vectors -->
-        <svg class="circuit-bg-svg" viewBox="0 0 500 300">
-          <path d="M 60 70 L 150 70 L 180 110" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5" />
-          <circle cx="60" cy="70" r="3" fill="rgba(0, 240, 255, 0.4)" />
-
-          <path d="M 50 150 L 160 150 L 180 140" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5" />
-          <circle cx="50" cy="150" r="3" fill="rgba(0, 240, 255, 0.4)" />
-
-          <path d="M 70 230 L 160 230 L 185 180" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5" />
-          <circle cx="70" cy="230" r="3" fill="rgba(0, 240, 255, 0.4)" />
-
-          <path d="M 440 70 L 350 70 L 320 110" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5" />
-          <circle cx="440" cy="70" r="3" fill="rgba(0, 240, 255, 0.4)" />
-
-          <path d="M 450 150 L 340 150 L 320 140" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5" />
-          <circle cx="450" cy="150" r="3" fill="rgba(0, 240, 255, 0.4)" />
-
-          <path d="M 430 230 L 340 230 L 315 180" fill="none" stroke="rgba(0, 240, 255, 0.12)" stroke-width="1.5" />
-          <circle cx="430" cy="230" r="3" fill="rgba(0, 240, 255, 0.4)" />
-        </svg>
-
-        <div class="vance-card-top">
-          <div class="vance-card-top-left">
-            <span class="vance-card-company">VANCE INTERPLANETARY</span>
-            <div class="glass-ceo-text">CEO</div>
-          </div>
-          <div class="vance-card-top-right">
-            <!-- Signal Bars Indicator -->
-            <div class="vance-signal-bars">
-              <span class="bar bar1 active"></span>
-              <span class="bar bar2 active"></span>
-              <span class="bar bar3 active"></span>
-              <span class="bar bar4 active"></span>
-              <span class="bar bar5 active"></span>
-            </div>
-            <!-- Globe wireframe logo -->
-            <svg class="vance-globe-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="50" cy="50" r="40" />
-              <ellipse cx="50" cy="50" rx="40" ry="15" />
-              <ellipse cx="50" cy="50" rx="15" ry="40" />
-              <line x1="5" y1="50" x2="95" y2="50" />
-              <line x1="50" y1="5" x2="50" y2="95" />
-            </svg>
-          </div>
-        </div>
-
-        <div class="vance-card-center">
-          <div class="vance-photo-ring-outer">
-            <div class="vance-photo-ring-inner">
-              <img src="elara.jpg" alt="CEO Elara Vance" class="vance-photo">
-            </div>
-          </div>
-        </div>
-
-        <div class="vance-card-bottom">
-          <div class="vance-barcode"></div>
-          <div class="vance-employee-info">
-            <h2 class="vance-name">ELARA VANCE</h2>
-            <div class="vance-role">CHIEF EXECUTIVE OFFICER</div>
-          </div>
-        </div>
-      </div>
-
+  <!-- Animated Portrait Modal -->
+  <div class="portrait-modal" id="portraitModal">
+    <div class="portrait-modal-backdrop" id="portraitModalBackdrop"></div>
+    <div class="portrait-wrapper">
+      <button class="portrait-close" id="portraitCloseBtn" title="Close">&times;</button>
+      <img src="" alt="Character Portrait" class="animated-portrait" id="animatedPortrait">
     </div>
   </div>
 

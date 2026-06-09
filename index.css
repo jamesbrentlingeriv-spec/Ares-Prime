@@ -1612,44 +1612,48 @@ body.viewing-mars .mars-viewer-btn:hover {
    ID CARD MODAL & BADGES STYLING (ARES PRIME PD & VANCE CORP)
    ========================================================================== */
 
-.id-modal {
+/* ==========================================================================
+   ANIMATED PORTRAIT MODAL STYLING
+   ========================================================================== */
+
+.portrait-modal {
   position: fixed;
   inset: 0;
-  z-index: 3000; /* Sit above Mars Viewer button (z-index: 2000) */
+  z-index: 3000;
   display: none;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
-.id-modal.active {
+.portrait-modal.active {
   display: flex;
 }
 
-.id-modal-backdrop {
+.portrait-modal-backdrop {
   position: absolute;
   inset: 0;
-  background-color: rgba(9, 9, 11, 0.85);
-  backdrop-filter: blur(12px);
+  background-color: rgba(9, 9, 11, 0.9);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
 }
 
-.id-card-wrapper {
+.portrait-wrapper {
   position: relative;
   z-index: 10;
-  max-width: 1100px;
+  max-width: 600px;
   width: 100%;
-  animation: modalZoomIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: portraitZoomIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@keyframes modalZoomIn {
-  from { opacity: 0; transform: scale(0.92); }
+@keyframes portraitZoomIn {
+  from { opacity: 0; transform: scale(0.9); }
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Close button on modal */
-.id-card-close {
+.portrait-close {
   position: absolute;
-  top: -3.5rem;
+  top: -3rem;
   right: 0;
   background: transparent;
   border: none;
@@ -1658,461 +1662,37 @@ body.viewing-mars .mars-viewer-btn:hover {
   cursor: pointer;
   transition: color 0.2s ease;
   line-height: 1;
+  z-index: 20;
 }
 
-.id-card-close:hover {
+.portrait-close:hover {
   color: var(--neon-laser);
 }
 
-/* ID Card Base Layout */
-.id-card {
-  display: none;
+.animated-portrait {
+  width: 100%;
+  height: auto;
   border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.8);
-  font-family: var(--font-mono);
-}
-
-.id-card.active {
+  border: 2px solid var(--neon-cyber);
+  box-shadow: 0 0 30px var(--neon-glow-cyber), 0 15px 45px rgba(0, 0, 0, 0.8);
   display: block;
 }
 
-/* ==========================================================================
-   JAX'S ID CARD: FOLDING APPD WALLET (policeidcard.jpg STYLE)
-   ========================================================================== */
-
-.id-card.card-jax {
-  max-width: 1100px;
-  width: 100%;
-}
-
-.wallet-container {
-  display: flex;
-  background: #151518;
-  border: 4px solid #27272a;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.9), inset 0 0 30px rgba(0,0,0,0.8);
-}
-
-.wallet-side {
-  width: 50%;
-  padding: 2.25rem;
-  box-sizing: border-box;
-  position: relative;
-}
-
-/* Left flap: Holds the heavy metallic badge */
-.wallet-side.side-badge {
-  background: radial-gradient(circle at center, #2e2e35 0%, #111113 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: 6px solid #09090b;
-  box-shadow: inset -8px 0 20px rgba(0,0,0,0.8);
-}
-
-.badge-holder {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.police-badge-svg {
-  width: 100%;
-  max-width: 180px;
-  height: auto;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.85)) drop-shadow(0 0 10px rgba(122, 31, 61, 0.15));
-}
-
-/* Right flap: Holds the virtual ID card */
-.wallet-side.side-card {
-  background: radial-gradient(circle at center, #1c1c21 0%, #0e0e10 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: inset 8px 0 20px rgba(0,0,0,0.8);
-}
-
-.police-card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  background: rgba(9, 9, 11, 0.5);
-  border: 1px solid rgba(255,255,255,0.05);
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-}
-
-.police-card-header {
-  border-bottom: 2px solid var(--neon-cyber);
-  padding-bottom: 0.5rem;
-}
-
-.police-card-meta {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  font-weight: 700;
-  color: var(--text-dim);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-}
-
-.police-card-title {
-  font-size: 1.35rem;
-  font-weight: 900;
-  color: var(--neon-cyber);
-  text-shadow: 0 0 8px var(--neon-glow-cyber);
-  letter-spacing: 0.05em;
-  margin-top: 0.15rem;
-}
-
-.police-card-main {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-}
-
-.police-photo-frame {
-  width: 400px;
-  height: 530px;
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 200 / 265;
-  border-radius: 4px;
-  border: 1.5px solid var(--neon-cyber);
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 0 15px rgba(122, 31, 61, 0.2);
-  background-color: #000;
-}
-
-.police-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.police-hologram {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%, 
-    rgba(122, 31, 61, 0.15) 50%
-  ), linear-gradient(
-    90deg, 
-    rgba(255, 0, 0, 0.04), 
-    rgba(0, 255, 0, 0.02), 
-    rgba(122, 31, 61, 0.08)
-  );
-  background-size: 100% 4px, 6px 100%;
-  pointer-events: none;
-}
-
-.police-card-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  align-items: center;
-  text-align: center;
-}
-
-.police-meta-row {
-  font-size: 0.65rem;
-  color: var(--text-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: flex;
-  justify-content: center;
-  gap: 0.4rem;
-}
-
-.police-lbl {
-  color: var(--text-dim);
-}
-
-.police-val {
-  color: var(--text-white);
-  font-weight: 700;
-}
-
-.police-name {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: var(--text-white);
-  margin-top: 0.5rem;
-  letter-spacing: 0.05em;
-  line-height: 1;
-}
-
-.police-rank {
-  font-size: 0.75rem;
-  color: var(--neon-cyber);
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  margin-top: 0.15rem;
-}
-
-.police-card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 0.75rem;
-}
-
-.police-barcode {
-  height: 26px;
-  width: 120px;
-  background-image: linear-gradient(90deg, 
-    #ffffff 0px, #ffffff 1.5px, transparent 1.5px, transparent 3px,
-    #ffffff 3px, #ffffff 4px, transparent 4px, transparent 8px,
-    #ffffff 8px, #ffffff 10px, transparent 10px, transparent 12px,
-    #ffffff 12px, #ffffff 14px, transparent 14px, transparent 17px,
-    #ffffff 17px, #ffffff 18px, transparent 18px, transparent 21px,
-    #ffffff 21px, #ffffff 25px, transparent 25px, transparent 28px,
-    #ffffff 28px, #ffffff 32px
-  );
-  background-size: 45px 100%;
-  opacity: 0.65;
-}
-
-.police-sensor {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 1.5px solid var(--neon-cyber);
-  position: relative;
-  box-shadow: 0 0 8px rgba(122, 31, 61, 0.4);
-}
-
-.police-sensor::after {
-  content: '';
-  position: absolute;
-  inset: 3px;
-  background-color: var(--neon-cyber);
-  border-radius: 50%;
-  animation: pulseSensor 2.5s infinite;
-}
-
-@keyframes pulseSensor {
-  0% { opacity: 0.3; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.1); }
-  100% { opacity: 0.3; transform: scale(0.9); }
+/* Responsive adjustments for portrait modal */
+@media (max-width: 768px) {
+  .portrait-wrapper {
+    max-width: 90vw;
+  }
+  
+  .portrait-close {
+    top: -2.5rem;
+    right: 0.5rem;
+  }
 }
 
 /* ==========================================================================
-   ELARA'S ID CARD: FROSTED GLASS HUD PASS (Vanceidcard.jpg STYLE)
+   OLD ID CARD STYLES REMOVED - REPLACED WITH ANIMATED PORTRAITS
    ========================================================================== */
-
-.id-card.card-elara {
-  max-width: 800px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.70); /* Semi-transparent white */
-  backdrop-filter: blur(8px);
-  border: 2px solid rgba(229, 231, 235, 0.6);
-  border-radius: 12px;
-  padding: 2.25rem;
-  position: relative;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-}
-
-/* Tech notches at the corners of the floating glass */
-.hud-corners {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.corner-notch {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 2px solid #cbd5e1; /* Light gray HUD notches */
-}
-
-.notch-tl { top: 10px; left: 10px; border-right: none; border-bottom: none; }
-.notch-tr { top: 10px; right: 10px; border-left: none; border-bottom: none; }
-.notch-bl { bottom: 10px; left: 10px; border-right: none; border-top: none; }
-.notch-br { bottom: 10px; right: 10px; border-left: none; border-top: none; }
-
-/* Circuit board traces in background */
-.circuit-bg-svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.circuit-bg-svg path {
-  stroke: rgba(122, 31, 61, 0.22) !important; /* Rust traces */
-}
-
-.circuit-bg-svg circle {
-  fill: rgba(122, 31, 61, 0.45) !important;
-}
-
-/* Top card row: CEO chrome text, signal indicator, wireframe globe */
-.vance-card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  z-index: 2;
-  position: relative;
-}
-
-.vance-card-company {
-  font-family: var(--font-mono);
-  font-size: 0.625rem;
-  font-weight: 700;
-  color: #6b7280; /* Neutral gray */
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  display: block;
-  margin-bottom: 0.25rem;
-}
-
-/* Solid CEO lettering */
-.glass-ceo-text {
-  font-family: var(--font-sans);
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #111827; /* Dark gray */
-  letter-spacing: -0.04em;
-  line-height: 1;
-}
-
-.vance-card-top-right {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  color: #1f2937;
-}
-
-.vance-signal-bars {
-  display: flex;
-  align-items: flex-end;
-  gap: 2px;
-  height: 14px;
-}
-
-.vance-signal-bars .bar {
-  width: 3px;
-  background-color: rgba(31, 41, 55, 0.15);
-  border-radius: 1px;
-}
-
-.bar1 { height: 20%; }
-.bar2 { height: 40%; }
-.bar3 { height: 60%; }
-.bar4 { height: 80%; }
-.bar5 { height: 100%; }
-
-.vance-signal-bars .bar.active {
-  background-color: #1f2937;
-}
-
-.vance-globe-svg {
-  width: 32px;
-  height: 32px;
-  color: #1f2937;
-}
-
-/* Center card row: Circular photo */
-.vance-card-center {
-  display: flex;
-  justify-content: center;
-  margin: 1.25rem 0;
-  z-index: 2;
-  position: relative;
-}
-
-.vance-photo-ring-outer {
-  width: 380px;
-  height: 380px;
-  border-radius: 50%;
-  border: 1px solid rgba(122, 31, 61, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-  background: rgba(122, 31, 61, 0.05);
-}
-
-.vance-photo-ring-inner {
-  width: 352px;
-  height: 352px;
-  border-radius: 50%;
-  border: 2px solid #111827;
-  overflow: hidden;
-  box-shadow: inset 0 2px 8px rgba(0,0,0,0.15);
-  background-color: #fff;
-  isolation: isolate;
-}
-
-.vance-photo-ring-inner img {
-  opacity: 1;
-  filter: none;
-}
-
-.vance-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Bottom card row: Barcode, Name, and Role */
-.vance-card-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  z-index: 2;
-  position: relative;
-  margin-top: 1rem;
-}
-
-.vance-barcode {
-  height: 32px;
-  width: 130px;
-  background-image: linear-gradient(90deg, 
-    #111827 0px, #111827 2.5px, transparent 2.5px, transparent 4px,
-    #111827 4px, #111827 5px, transparent 5px, transparent 9px,
-    #111827 9px, #111827 12.5px, transparent 12.5px, transparent 15px,
-    #111827 15px, #111827 16px, transparent 16px, transparent 19px,
-    #111827 19px, #111827 21px, transparent 21px, transparent 23px,
-    #111827 23px, #111827 28px, transparent 28px, transparent 31px,
-    #111827 31px, #111827 35px
-  );
-  background-size: 48px 100%;
-  opacity: 0.9;
-}
-
-.vance-employee-info {
-  text-align: right;
-  font-family: var(--font-sans);
-}
-
-.vance-name {
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: #000000; /* Rich solid black */
-  letter-spacing: 0.05em;
-  line-height: 1;
-}
-
-.vance-role {
-  font-size: 0.72rem;
-  color: #4b5563;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  margin-top: 0.35rem;
-}
 
 /* ==========================================================================
    AVATARS HOVER AND RESPONSIVE WRAPPERS

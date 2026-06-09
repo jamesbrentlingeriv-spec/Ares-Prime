@@ -22,12 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelectorAll('.dossier-tab');
   const tabPanes = document.querySelectorAll('.tab-pane');
   
-  // ID Badge Modals
-  const idCardModal = document.getElementById('idCardModal');
-  const idCardJax = document.getElementById('idCardJax');
-  const idCardElara = document.getElementById('idCardElara');
-  const idCardCloseBtn = document.getElementById('idCardCloseBtn');
-  const idModalBackdrop = document.getElementById('idModalBackdrop');
+  // Animated Portrait Modal
+  const portraitModal = document.getElementById('portraitModal');
+  const animatedPortrait = document.getElementById('animatedPortrait');
+  const portraitCloseBtn = document.getElementById('portraitCloseBtn');
+  const portraitModalBackdrop = document.getElementById('portraitModalBackdrop');
   
   // Reader Overlay Ctrls
   const readerOverlay = document.getElementById('readerOverlay');
@@ -247,12 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     
-    // Dismiss ID Badge modals with Escape
-    if (idCardModal && idCardModal.classList.contains('active')) {
-      if (e.key === 'Escape') {
-        closeIdModal();
-      }
-    }
   });
 
   // ==========================================================================
@@ -386,40 +379,39 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // INTERACTIVE ID CARD BADGES (CLICK AVATARS)
+  // INTERACTIVE ANIMATED PORTRAITS (CLICK AVATARS)
   // ==========================================================================
   const avatarJax = document.querySelector('.profile-avatar.avatar-jax');
   const avatarElara = document.querySelector('.profile-avatar.avatar-elara');
 
-  if (avatarJax && idCardModal) {
+  if (avatarJax && portraitModal) {
     avatarJax.addEventListener('click', () => {
-      idCardJax.classList.add('active');
-      idCardElara.classList.remove('active');
-      idCardModal.classList.add('active');
+      animatedPortrait.src = 'jax.gif';
+      animatedPortrait.alt = 'Detective Jax Animated Portrait';
+      portraitModal.classList.add('active');
     });
   }
 
-  if (avatarElara && idCardModal) {
+  if (avatarElara && portraitModal) {
     avatarElara.addEventListener('click', () => {
-      idCardElara.classList.add('active');
-      idCardJax.classList.remove('active');
-      idCardModal.classList.add('active');
+      animatedPortrait.src = 'elara.gif';
+      animatedPortrait.alt = 'CEO Elara Vance Animated Portrait';
+      portraitModal.classList.add('active');
     });
   }
 
-  function closeIdModal() {
-    if (idCardModal) {
-      idCardModal.classList.remove('active');
-      idCardJax.classList.remove('active');
-      idCardElara.classList.remove('active');
+  function closePortraitModal() {
+    if (portraitModal) {
+      portraitModal.classList.remove('active');
+      animatedPortrait.src = ''; // Stop the GIF animation
     }
   }
 
-  if (idCardCloseBtn) {
-    idCardCloseBtn.addEventListener('click', closeIdModal);
+  if (portraitCloseBtn) {
+    portraitCloseBtn.addEventListener('click', closePortraitModal);
   }
-  if (idModalBackdrop) {
-    idModalBackdrop.addEventListener('click', closeIdModal);
+  if (portraitModalBackdrop) {
+    portraitModalBackdrop.addEventListener('click', closePortraitModal);
   }
 
   // ==========================================================================
